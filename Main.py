@@ -57,7 +57,7 @@ if st.checkbox("Show Statistics_Testing Data"):
 model = tf.keras.models.load_model('covid_DNN.h5')
 
 # Load the COVID input data
-covid_input = pd.read_excel('input_COVID.xlsx, sheet_name='Sheet 1 - input_covid')  # Replace with the actual path to COVID_input.csv
+covid_input = pd.read_excel('input_COVID.xlsx, sheet_name='Sheet 1') 
 
 # Assuming you want to select the first 9 columns
 covid_data = data1.iloc[:, :9].values
