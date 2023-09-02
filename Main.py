@@ -3,7 +3,6 @@ import pandas as pd
 import numpy as np
 import tensorflow as tf
 import urllib.request
-import zipfile
 
 # Image
 st.image("covid-vax-bottle-700x467.jpeg", width=700)
@@ -49,16 +48,14 @@ if st.checkbox("Show Statistics_Training Data"):
 # Kaggle dataset download URL
 kaggle_dataset_url = "https://www.kaggle.com/datasets/futurecorporation/epitope-prediction/download?datasetVersionNumber=1"
 
-# Download the ZIP file
-urllib.request.urlretrieve(kaggle_dataset_url, "dataset.zip")
+# Kaggle dataset download URL for the CSV file
+kaggle_csv_url = "https://www.kaggle.com/datasets/futurecorporation/epitope-prediction/download/input_covid.csv"
 
-# Extract the ZIP file
-with zipfile.ZipFile("dataset.zip", "r") as zip_ref:
-    zip_ref.extractall("dataset")
+# Download the CSV file
+urllib.request.urlretrieve(kaggle_csv_url, "input_covid.csv")
 
-# Load the CSV file from the extracted directory
-csv_file_path = "dataset/archive/input_covid.csv"
-data1 = pd.read_csv(csv_file_path, encoding='unicode_escape', usecols=['peptide', 'target'], parse_dates=True)
+# Load the CSV file directly
+data1 = pd.read_csv("input_covid.csv", encoding='unicode_escape', usecols=['peptide', 'target'], parse_dates=True)
 
 
 # Example: Display the first few rows of the loaded data
