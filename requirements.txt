@@ -3,4 +3,3 @@ Pandas
 Numpy
 tensorflow
 urllib3
-zipfile
