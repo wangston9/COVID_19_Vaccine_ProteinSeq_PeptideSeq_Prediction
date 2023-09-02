@@ -2,4 +2,4 @@ Streamlit
 Pandas
 Numpy
 tensorflow
-urllib3
+openpyxl
