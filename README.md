@@ -1,1 +1,1 @@
-# COVID_19_Vaccine_ProteinSeq_PeptideSeq_Prediction
+# COVID-19 Vaccine's ProteinSeq and PeptideSeq Prediction
