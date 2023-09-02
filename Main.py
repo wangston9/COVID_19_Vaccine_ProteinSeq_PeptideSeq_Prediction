@@ -55,7 +55,7 @@ kaggle_csv_url = "https://www.kaggle.com/datasets/futurecorporation/epitope-pred
 urllib.request.urlretrieve(kaggle_csv_url, "input_covid.csv")
 
 # Load the CSV file directly
-covid_input = pd.read_csv("input_covid.csv", encoding='unicode_escape')
+covid_input = pd.read_csv("input_covid.csv", encoding='utf-8', sep=',')
 
 # Load the COVID input data
 data1 = pd.read_csv('COVID_TestData.csv')  
