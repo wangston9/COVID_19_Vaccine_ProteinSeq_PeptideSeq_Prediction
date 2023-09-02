@@ -4,7 +4,7 @@ import numpy as np
 import tensorflow as tf
 
 # Image
-st.image("covid-vax-bottle-700x467.jpeg", width=700)
+st.image("covid-vax-bottle-700x467.jpeg", output_format='auto')
 
 st.title("COVID-19 Vaccine Peptide Sequence Prediction")
 st.write("This app predicts potential COVID-19 epitope peptide sequence using Deep Neural Network.")
@@ -15,13 +15,13 @@ st.markdown("Information on whether or not an amino acid peptide exhibited antib
 st.markdown("There are Three Datasets Available: B_Cell, SARS, COVID. B_Cell and SARS are labeled and combined to be used as Training Dataset. COVID dataset is used as testing dataset for prediction.")
 
 # Image
-st.image("BCell_Activation.jpeg", width=700)
+st.image("BCell_Activation.jpeg", output_format='auto')
 
 st.markdown("<h2 style='text-align: center;'>Data Properties:</h2>", unsafe_allow_html=True)
-st.image("Data_Properties.png", width=700)
+st.image("Data_Properties.png", output_format='auto')
 
 st.markdown("<h2 style='text-align: center;'>Overview of Process:</h2>", unsafe_allow_html=True)
-st.image("Process_Overview.png", width=700)
+st.image("Process_Overview.png", output_format='auto')
 
 
 # Load the cleaned data from the CSV file
