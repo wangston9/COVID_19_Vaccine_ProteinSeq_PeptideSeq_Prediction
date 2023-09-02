@@ -55,7 +55,7 @@ kaggle_csv_url = "https://www.kaggle.com/datasets/futurecorporation/epitope-pred
 urllib.request.urlretrieve(kaggle_csv_url, "input_covid.csv")
 
 # Load the CSV file directly
-data1 = pd.read_csv("input_covid.csv", encoding='unicode_escape')
+covid_input = pd.read_csv("input_covid.csv", encoding='unicode_escape')
 
 
 # Example: Display the first few rows of the loaded data
@@ -71,7 +71,7 @@ if st.checkbox("Show Statistics_Testing Data"):
 model = tf.keras.models.load_model('covid_DNN.h5')
 
 # Load the COVID input data
-covid_input = pd.read_csv('input_COVID.csv')  # Replace with the actual path to COVID_input.csv
+data1 = pd.read_csv('COVID_TestData.csv')  # Replace with the actual path to COVID_input.csv
 
 # Assuming you want to select the first 9 columns
 covid_data = data1.iloc[:, :9].values
