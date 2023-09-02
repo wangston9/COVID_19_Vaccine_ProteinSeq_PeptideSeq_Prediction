@@ -1,1 +1,6 @@
-StreamlitPandasNumpytensorflow
+Streamlit
+Pandas
+Numpy
+tensorflow
+urllib3
+zipfile
