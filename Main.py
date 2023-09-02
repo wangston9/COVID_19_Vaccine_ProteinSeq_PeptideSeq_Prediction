@@ -2,6 +2,8 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import tensorflow as tf
+import urllib.request
+import zipfile
 
 # Image
 st.image("covid-vax-bottle-700x467.jpeg", width=700)
@@ -47,11 +49,16 @@ if st.checkbox("Show Statistics_Training Data"):
 # Kaggle dataset download URL
 kaggle_dataset_url = "https://www.kaggle.com/datasets/futurecorporation/epitope-prediction/download?datasetVersionNumber=1"
 
-# The name of the CSV file you want to access within the archive folder
-csv_file_name = "archive/input_covid.csv"
+# Download the ZIP file
+urllib.request.urlretrieve(kaggle_dataset_url, "dataset.zip")
 
-# Load the data from the specific CSV file into data1
-data1 = pd.read_csv(kaggle_dataset_url, compression='zip', encoding='unicode_escape', storage_options={"key": "datasetVersionNumber=1"}, usecols=['peptide', 'target'], parse_dates=True)
+# Extract the ZIP file
+with zipfile.ZipFile("dataset.zip", "r") as zip_ref:
+    zip_ref.extractall("dataset")
+
+# Load the CSV file from the extracted directory
+csv_file_path = "dataset/archive/input_covid.csv"
+data1 = pd.read_csv(csv_file_path, encoding='unicode_escape', usecols=['peptide', 'target'], parse_dates=True)
 
 
 # Example: Display the first few rows of the loaded data
