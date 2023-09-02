@@ -6,17 +6,13 @@ import tensorflow as tf
 # Image
 st.image("covid-vax-bottle-700x467.jpeg", width=700)
 
-def main():
-    st.title("COVID-19 Vaccine Peptide Sequence Prediction")
-    st.write("This app predicts potential COVID-19 epitope peptide sequence using Deep Neural Network.")
-    st.markdown("**Application:** Vaccine Development")
-    st.markdown("**Data Source:** [COVID-19/SARS B-cell Epitope Prediction](https://www.kaggle.com/datasets/futurecorporation/epitope-prediction)")
-    st.markdown("**Data License:** Attribution 4.0 International (CC BY 4.0)")
-    st.markdown("Information on whether or not an amino acid peptide exhibited antibody-inducing activity (marked by an activity label) could be obtained from IEDB, which was used in many previous studies. Accordingly, this information was used as the label data. We also obtained the epitope candidate amino acid sequences (peptides) and the activity label data from the B-cell epitope data provided in IEDB. The presented antibody proteins were restricted to IgG that constituted the most recorded type in IEDB.")
-    st.markdown("There are Three Datasets Available: B_Cell, SARS, COVID. B_Cell and SARS are labeled and combined to be used as Training Dataset. COVID dataset is used as testing dataset for prediction.")
-
-if __name__ == "__main__":
-    main()
+st.title("COVID-19 Vaccine Peptide Sequence Prediction")
+st.write("This app predicts potential COVID-19 epitope peptide sequence using Deep Neural Network.")
+st.markdown("**Application:** Vaccine Development")
+st.markdown("**Data Source:** [COVID-19/SARS B-cell Epitope Prediction](https://www.kaggle.com/datasets/futurecorporation/epitope-prediction)")
+st.markdown("**Data License:** Attribution 4.0 International (CC BY 4.0)")
+st.markdown("Information on whether or not an amino acid peptide exhibited antibody-inducing activity (marked by an activity label) could be obtained from IEDB, which was used in many previous studies. Accordingly, this information was used as the label data. We also obtained the epitope candidate amino acid sequences (peptides) and the activity label data from the B-cell epitope data provided in IEDB. The presented antibody proteins were restricted to IgG that constituted the most recorded type in IEDB.")
+st.markdown("There are Three Datasets Available: B_Cell, SARS, COVID. B_Cell and SARS are labeled and combined to be used as Training Dataset. COVID dataset is used as testing dataset for prediction.")
 
 # Image
 st.image("BCell_Activation.jpeg", width=700)
