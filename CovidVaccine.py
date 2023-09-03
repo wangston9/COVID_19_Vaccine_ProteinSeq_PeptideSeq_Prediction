@@ -8,7 +8,7 @@ st.image("covid-vax-bottle-700x467.jpeg", output_format='auto')
 
 st.title("COVID-19 Vaccine Peptide Sequence Prediction")
 st.write("This app predicts potential COVID-19 epitope peptide sequence using Deep Neural Network.")
-st.markdown("**Application:** Vaccine Development")
+st.markdown("**Developer:** Winston Wang, 03Sep2023   /   **Application:** Vaccine Development")
 st.markdown("**Data Source:** [COVID-19/SARS B-cell Epitope Prediction](https://www.kaggle.com/datasets/futurecorporation/epitope-prediction)")
 st.markdown("**Data License:** Attribution 4.0 International (CC BY 4.0)")
 st.markdown("Information on whether or not an amino acid peptide exhibited antibody-inducing activity (marked by an activity label) could be obtained from IEDB, which was used in many previous studies. Accordingly, this information was used as the label data. We also obtained the epitope candidate amino acid sequences (peptides) and the activity label data from the B-cell epitope data provided in IEDB. The presented antibody proteins were restricted to IgG that constituted the most recorded type in IEDB.")
@@ -63,10 +63,10 @@ def preprocess(covid_data):
     return np.array(covid_data, dtype=np.float32)
 
 # Make predictions with Streamlit
-st.title('COVID-19 Prediction App')
+st.title('Best COVID-19 Vaccine Peptide Sequence Predictions')
 
 # Input field for the number of rows to display
-num_rows = st.number_input('Number of Rows to Display', min_value=1, max_value=len(data1), value=5)
+num_rows = st.number_input('Number of Peptide Sequences to Display', min_value=1, max_value=len(data1), value=5)
 
 if st.button('Show Predictions'):
     covid_data = preprocess(covid_data)
